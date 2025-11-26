@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright English - Репетитор Английского</title>
+    <!-- Подключение Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Конфигурация Tailwind для использования пользовательских цветов и шрифта Inter -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-teal': '#14b8a6', // Teal 500
+                        'accent-yellow': '#fbbf24', // Amber 400
+                        'bg-light': '#f0fdfa', // Teal 50
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Установка шрифта Inter из Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Добавление плавных переходов для интерактивных элементов */
+        .transition-all {
+            transition-property: all;
+            transition-duration: 300ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        /* Стиль для секций с теневым эффектом */
+        .section-card {
+            background-color: white;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-radius: 1.5rem; /* rounded-3xl */
+            padding: 2rem; /* p-8 */
+            transition: transform 0.3s ease-in-out;
+        }
+        /* Эффект при наведении на карточки услуг */
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(20, 184, 166, 0.3), 0 8px 10px -6px rgba(20, 184, 166, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans bg-bg-light text-gray-800 antialiased">
+
+    <!-- 1. HEADER / HERO SECTION (Яркий и броский блок) -->
+    <header class="bg-primary-teal text-white py-16 md:py-24 shadow-2xl overflow-hidden">
+        <div class="container mx-auto px-6 text-center">
+            <!-- Декоративные элементы в виде кругов для яркости -->
+            <div class="absolute inset-0 bg-primary-teal opacity-10"></div>
+            <div class="absolute top-0 right-0 w-40 h-40 bg-accent-yellow rounded-full mix-blend-multiply opacity-20 transform translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 left-0 w-60 h-60 bg-white rounded-full mix-blend-overlay opacity-5 transform -translate-x-1/2 translate-y-1/2"></div>
+
+            <div class="relative z-10">
+                <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
+                    Мила Игошева
+                </h1>
+                <!-- Новый, главный слоган, заменяющий старые две строки -->
+                <p class="text-2xl sm:text-4xl font-bold text-accent-yellow drop-shadow-lg mb-8">
+                    Английский для детей дошкольного и младшего школьного возраста
+                </p>
+                <a href="#about" class="inline-block mt-10 px-8 py-3 bg-accent-yellow text-gray-900 font-bold rounded-full text-lg hover:bg-yellow-300 transition-all shadow-xl hover:shadow-2xl">
+                    Записаться на пробный урок
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-12 md:py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 space-y-16 md:space-y-24">
+
+            <!-- 2. SERVICES SECTION (Услуги) -->
+            <section id="services">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 text-primary-teal">
+                    Мои Услуги
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Карточка 1 - Английский для малышей (4-6 лет) -->
+                    <div class="section-card service-item border-b-4 border-primary-teal">
+                        <div class="text-4xl text-primary-teal mb-4">🌈</div>
+                        <h3 class="text-xl font-bold mb-3">Английский для детей 4-6 лет</h3>
+                        <p class="text-gray-600 text-sm">
+                            Курс основан на принципе «Английский как родной», без учебников, в игре. На занятиях идет погружение в языковую среду и естественное обучение через песенки, книжки и творчество. Для ребят создаются ситуации, побуждающие их к речи. Каждое занятие ведет к определенной речевой цели. Именно такой подход дает потрясающие результаты в изучении Английского языка!
+                        </p>
+                    </div>
+                    
+                    <!-- Карточка 2 - Курс-интенсив для детей -->
+                    <div class="section-card service-item border-b-4 border-accent-yellow">
+                        <div class="text-4xl text-accent-yellow mb-4">🚀</div>
+                        <h3 class="text-xl font-bold mb-3">Курс-интенсив для детей 6-12 лет</h3>
+                        <p class="text-gray-600 text-sm">
+                            Курс с нуля для развития всех ключевых навыков: речи, чтения, письма и восприятия языка на слух. Рассчитан на 3 месяца (два занятия в неделю по 40 минут).
+                        </p>
+                    </div>
+
+
+                    <!-- Карточка 3 - Курс Kids Box -->
+                    <div class="section-card service-item border-b-4 border-accent-yellow">
+                        <div class="text-4xl text-accent-yellow mb-4">📖</div>
+                        <h3 class="text-xl font-bold mb-3">Курс Kids Box (Продолжение)</h3>
+                        <p class="text-gray-600 text-sm">
+                            Логичное продолжение изучения языка с веселыми героями учебника Kids Box. Мы продолжаем развивать устную речь, пишем, читаем, слушаем.
+                        </p>
+                    </div>
+                    
+                    <!-- Карточка 4 была удалена -->
+                </div>
+                <!-- Добавляем кнопку записи сюда, так как удалили секцию контактов -->
+                <div class="text-center mt-12">
+                    <a href="#about" class="inline-block px-8 py-3 bg-primary-teal text-white font-bold rounded-full text-lg hover:bg-teal-600 transition-all shadow-xl hover:shadow-2xl">
+                        Записаться на пробный урок
+                    </a>
+                </div>
+            </section>
+
+            <!-- 3. ABOUT ME / BENEFITS (Обо мне и преимущества) -->
+            <section id="about" class="bg-white rounded-3xl shadow-xl p-8 md:p-12 lg:p-16 border-l-8 border-primary-teal">
+                <div class="md:flex md:space-x-12 items-center">
+                    <div class="md:w-1/3 mb-6 md:mb-0 text-center">
+                        <!-- Фотография преподавателя: Используется content_fetch_id для отображения загруженного изображения -->
+                        <img src="data:image/png;content_fetch_id=uploaded:Hailuo_Image_Crop the head and create a 2-i_450129682231672836.png-3632507b-a12a-4e7e-a727-9115634daec1" 
+                             alt="Фото Милы Игошевой" 
+                             class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-accent-yellow shadow-lg"/>
+                        <h3 class="text-2xl font-bold mt-4 text-primary-teal">Мила</h3>
+                        <p class="text-sm text-gray-500">преподаватель английского языка. Работаю с детьми более 6 лет.</p>
+                    </div>
+                    <div class="md:w-2/3">
+                        <h2 class="text-3xl font-extrabold mb-4 text-primary-teal">
+                            Вам сюда, если вы хотите:
+                        </h2>
+                        <ul class="space-y-3 text-lg text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-accent-yellow text-2xl mr-3 leading-none">✓</span>
+                                <span class="flex-1">привить ребенку любовь к английскому</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-accent-yellow text-2xl mr-3 leading-none">✓</span>
+                                <span class="flex-1">чтобы ребенок уверенно себя чувствовал на занятиях в школе</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-accent-yellow text-2xl mr-3 leading-none">✓</span>
+                                <span class="flex-1">развивать у ребенка умение рассуждать и поддерживать беседу на английском языке</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Добавляем блок контактов -->
+             <div class="text-center pt-8">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-primary-teal">Свяжитесь со мной</h2>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="mailto:i.igosheva@icloud.com" class="px-8 py-4 bg-accent-yellow text-gray-900 font-extrabold rounded-xl text-lg hover:bg-yellow-300 transition-all shadow-xl hover:shadow-2xl flex items-center justify-center">
+                        ✉️ Отправить E-mail
+                    </a>
+                    <a href="https://t.me/milafoniya" target="_blank" class="px-8 py-4 bg-primary-teal text-white font-extrabold rounded-xl text-lg hover:bg-teal-600 transition-all shadow-xl hover:shadow-2xl flex items-center justify-center">
+                        💬 Написать в Telegram
+                    </a>
+                </div>
+                <p class="mt-8 text-sm text-gray-600">
+                    Или просто позвоните: <a href="tel:+79821021966" class="underline hover:text-primary-teal">+7 (982) 102-19-66</a>
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER был полностью удален по запросу -->
+
+</body>
+</html>
